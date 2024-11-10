@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Your Interactive Resume</h1>
+
+        <!-- Form for user input -->
+        <div class="form">
+            <input type="text" id="name" placeholder="Enter your name" oninput="updatePreview()">
+            <input type="email" id="email" placeholder="Enter your email" oninput="updatePreview()">
+            <textarea id="summary" placeholder="Summary about you" oninput="updatePreview()"></textarea>
+            
+            <select id="theme" onchange="changeTheme()">
+                <option value="classic">Classic Theme</option>
+                <option value="modern">Modern Theme</option>
+            </select>
+            
+            <button onclick="downloadResume()">Download as PDF</button>
+        </div>
+
+        
+    <!-- Include jsPDF library for PDF download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
